@@ -1,0 +1,9 @@
+{
+	"name": "node-heroku-ip-service",
+	"version": "2",
+	"dependencies": {},
+	"engines": {
+		"node": "0.8.x",
+		"npm": "1.1.x"
+	}
+}
