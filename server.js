@@ -24,12 +24,9 @@ if (cluster.isMaster) {
 	var template = fs.readFileSync('index.html').toString();
 
 	http.createServer(function(req, res) {
-		var ip = req.headers['x-forwarded-for']; 
+		var ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress; 
 		var path = URL.parse(req.url).pathname;
-		if (!ip) {
-			res.writeHead(500);
-			res.end('Unable to determine your IP. This script expects a load balancer, such as the one that heroku.com provides, to set the x-forwarded-for header.');
-		} else if (path == "/") {
+		if (path == "/") {
 			res.writeHead(200);
 			res.end(template.replace(/\{ip\}/g, ip).replace(/\{domain\}/g, req.headers['host']));
 		} else if (path == '/text') {
