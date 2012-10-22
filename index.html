@@ -3,6 +3,7 @@
 <head>
 <title>Your IP is {ip}</title>
 <link href='http://fonts.googleapis.com/css?family=Archivo+Narrow' rel='stylesheet' type='text/css'>
+<meta name="keywords" content="IP, Internet Protocol, Addess, Lookup, Service, API">
 <style type="text/css">
 /* color palet from http://www.colourlovers.com/palette/2479354/durratino_CLAD */
 body {
@@ -17,7 +18,8 @@ body {
 	border-radius: 14px;
 	margin: 30px auto;
 	padding: 20px 40px;
-	width: 600px;
+	width: 580px;
+	position: relative; /* for github ribbon */
 }
 h1 {
 	font-size: 300%;
@@ -34,8 +36,10 @@ a {
 <div id="container">
 <h1>{ip}</h1>
 <h2>Text API: <a href="/text">{domain}/text</a></h2>
-<p id="about"><a href="/">What's My Ip</a> service by <a href="http://nfriedly.com" title="node.js expert">Nathan Friedly</a>. 
-<a href="https://github.com/nfriedly/node-whats-my-ip">Source code</a> is avaliable on Github.</p>
+<p id="about"><a href="/">What's My IP</a> service by <a href="http://nfriedly.com" title="node.js expert">Nathan Friedly</a> with node.js.  
+</p>
+
+<a href="https://github.com/nfriedly/node-whats-my-ip"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
 </div>
 </body>
 </html>
