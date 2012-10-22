@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Your IP is {ip}</title>
+<link href='http://fonts.googleapis.com/css?family=Rosarivo' rel='stylesheet' type='text/css'>
+<style type="text/css">
+/* color palet from http://www.colourlovers.com/palette/2479354/durratino_CLAD */
+body {
+	background: #6F0738;
+	color: #1C877D;
+	font-family: 'Rosarivo', serif;
+	font-size: 16pt;
+}
+#container {
+	border: 10px solid #693B4C;
+	background: #D9F1C3;
+	border-radius: 14px;
+	margin: 30px auto;
+	padding: 20px 40px;
+	width: 600px;
+}
+h1 {
+	font-size: 300%;
+}
+h2 {
+	font-size: 150%;
+}
+a {
+	color: #31C994;
+}
+</style>
+</head>
+<body>
+<div id="container">
+<h1>{ip}</h1>
+<h2>API-version: <a href="/text">{domain}/text</a></h2>
+<p id="about"><a href="/">Whats My Ip service</a> by <a href="http://nfriedly.com">Nathan Friedly</a>. 
+<a href="">Source code</a> is avaliable on Github.
+<a href="http://heroku.com">Hosted</a> by Heroku. </p>
+</div>
+</body>
+</html>
