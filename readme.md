@@ -1,8 +1,13 @@
-Text-based IP API
-=================
+Text-based API for discovering the your current public IP
+========================================================
 
 Returns the requester's public IP as plain text. Also has a pretty front page. Was 
 built to support https://github.com/nfriedly/node-dreamhost-dns-updater
+
+Feel free to use http://whatsmyip.nfriedly.com/text for any project that you want, however
+I make no guarentee that it will always be avaliable. It will ocasionally be slow to 
+respond due to the fact that heroku shuts down free instances after a while and restarts 
+them when they recieve their next request.
 
 Installation / Set Up
 ---------------------
