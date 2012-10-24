@@ -1,8 +1,10 @@
-Text-based API for discovering the your current public IP
-========================================================
+Text-based API for discovering your public IP
+==============================================
 
-Returns the requester's public IP as plain text. Also has a pretty front page. Was 
-built to support https://github.com/nfriedly/node-dreamhost-dns-updater
+Returns the requester's public IP as plain text. This will be different from 
+their machine's IP when behind a NAT / PAT firewall.Also has a pretty front 
+page. Was built to support 
+https://github.com/nfriedly/node-dreamhost-dns-updater
 
 Feel free to use http://whatsmyip.nfriedly.com/text for any project that you want, however
 I make no guarentee that it will always be avaliable. It will ocasionally be slow to 
@@ -19,10 +21,10 @@ then it returns the request's IP.
 Credits
 -------
 
-Color Scheme by IcyMint, Creative Commons CC-BY-NC-SA
+Color Scheme by IcyMint, Creative Commons CC-BY-NC-SA: 
 http://www.colourlovers.com/palette/2479354/durratino_CLAD
 
-All other code and assets By Nathan Friedly, released under the MIT License:
+All other code and assets by Nathan Friedly, released under the MIT License:
 
 MIT License
 -----------
