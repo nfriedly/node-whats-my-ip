@@ -5,6 +5,7 @@ var http = require('http');
 var numCPUs = require('os').cpus().length;
 var fs = require('fs');
 var URL = require('url');
+var util = require('util');
 
 if (!process.env.PORT) {
 	console.error('The PORT environment variable must be set');
@@ -22,16 +23,28 @@ if (cluster.isMaster) {
 } else {
 
 	var template = fs.readFileSync('index.html').toString();
+	var headers = {'Access-Control-Allow-Origin': '*'}; // CORS FTW
 
 	http.createServer(function(req, res) {
-		var ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress; 
-		var path = URL.parse(req.url).pathname;
+		var ip = req.connection.remoteAddress;
+		if (req.headers['x-forwarded-for']) {
+			ip = req.headers['x-forwarded-for'].split(', ').shift()
+		} 
+		var url = URL.parse(req.url, true); // true = parse querystring to object
+		var path = url.pathname;
 		if (path == "/") {
 			res.writeHead(200);
 			res.end(template.replace(/\{ip\}/g, ip).replace(/\{domain\}/g, req.headers['host']));
 		} else if (path == '/text') {
-			res.writeHead(200);
+			res.writeHead(200, headers);
 			res.end(ip);
+		} else if (path == '/json') {
+			var data = JSON.stringify({ip: ip});
+			if (url.query && url.query.callback) {
+				data = util.format('%s(%s);', url.query.callback, data);
+			}
+			res.writeHead(200, headers); 
+			res.end(data);
 		} else {
 			res.writeHead(404);
 			res.end('404 file not found');
