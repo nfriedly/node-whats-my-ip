@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Your IP is {ip}</title>
+<title>503 Error</title>
 <link href='http://fonts.googleapis.com/css?family=Archivo+Narrow' rel='stylesheet' type='text/css'>
 <meta name="keywords" content="IP, Internet Protocol, Addess, Lookup, Service, API, JSON, JSONP, CORS, free">
 <meta name="description" content="Free IP tool with developer-friendly API supports text, JSON, JSONP and CORS">
@@ -89,18 +89,18 @@ p {
 </head>
 <body>
 <div id="container">
-	<h1>{ip}</h1>
+	<h1>503 Error</h1>
 	
-	<h2>API:</h2>
-	<ul>
-		<li>Text: <a href="/text">{domain}/text</a></li>
-		<li>JSON: <a href="/json">{domain}/json</a></li>
-		<li>JSONP: <a href="/json?callback=alert">{domain}/json?callback=alert</a></li>
-	</ul>
+	<h2>This app is sleeping</h2>
 	
-	<p>All APIs support <a href="https://developer.mozilla.org/en-US/docs/HTTP/Access_control_CORS">CORS</a> and can be used on HTTPS with a protocol-relative url like so: <a href="https://whats-my-ip.herokuapp.com/json?callback=alert">//whats-my-ip.herokuapp.com/json?callback=alert</a>.</p> 
-	
-	<p>Happy hacking!</p>
+	<p>Heroku <a href="https://blog.heroku.com/archives/2015/5/7/new-dyno-types-public-beta#hobby-and-free-dynos">nerfed the free tier</a> and now forces apps to
+	<a href="https://devcenter.heroku.com/articles/dyno-sleeping">sleep</a> for a minimum of 6 hours per day. Since you're seeing this page, we're apparently in that 6 hour period now.</p> 
+
+	<p>If you'd like this service to be available 24/7, please consider supporting me through <a href="https://gratipay.com/~nfriedly/">Gratipay</a> - $2/week would be enough to keep this site online:</p>
+
+	<p><script data-gratipay-username="nfriedly"
+        data-gratipay-widget="button"
+        src="//grtp.co/v1.js"></script></p>
 	
 	<h2 id="about"><a href="/">What's My IP</a> service by <a href="http://nfriedly.com" title="JavaScript / node.js expert">Nathan Friedly</a> with node.js.</h2>
 	
