@@ -88,7 +88,7 @@ p {
 
 </head>
 <body>
-<div id="container">
+< id="container">
 	<h1>{ip}</h1>
 	
 	<h2>API:</h2>
@@ -101,6 +101,19 @@ p {
 	<p>All APIs support <a href="https://developer.mozilla.org/en-US/docs/HTTP/Access_control_CORS">CORS</a> and can be used on HTTPS with a protocol-relative url like so: <a href="https://whats-my-ip.herokuapp.com/json?callback=alert">//whats-my-ip.herokuapp.com/json?callback=alert</a>.</p> 
 	
 	<p>Happy hacking!</p>
+
+	<h2>Availability Notice</h2>
+
+	<p>Heroku <a href="https://blog.heroku.com/archives/2015/5/7/new-dyno-types-public-beta#hobby-and-free-dynos">nerfed
+		the free tier</a> and now forces apps to <a href="https://devcenter.heroku.com/articles/dyno-sleeping">to stay
+		offline</a> for a minimum of 6 hours per day. (Starting on August 15th.)</p>
+
+	<p>If you'd like this service to be available 24/7, please consider supporting me through <a href="https://gratipay.com/~nfriedly/">Gratipay</a>
+		- $2/week would be enough to keep the service up for everyone:</p>
+
+	<p><script data-gratipay-username="nfriedly"
+		   data-gratipay-widget="button"
+		   src="//grtp.co/v1.js"></script></p>
 	
 	<h2 id="about"><a href="/">What's My IP</a> service by <a href="http://nfriedly.com" title="JavaScript / node.js expert">Nathan Friedly</a> with node.js.</h2>
 	
