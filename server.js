@@ -26,7 +26,7 @@ if (cluster.isMaster) {
 	var headers = {'Access-Control-Allow-Origin': '*'}; // CORS FTW
 
 	http.createServer(function(req, res) {
-		var ip = req.connection.remoteAddress;
+		var ip = req.socket.remoteAddress;
 		if (req.headers['x-forwarded-for']) {
 			ip = req.headers['x-forwarded-for'].split(', ').shift()
 		} 
@@ -49,5 +49,5 @@ if (cluster.isMaster) {
 			res.writeHead(404);
 			res.end('404 file not found');
 		}
-	}).listen(process.env.PORT);
+	}).listen(process.env.PORT, '0.0.0.0'); // https://stackoverflow.com/a/41295130/933879
 }
