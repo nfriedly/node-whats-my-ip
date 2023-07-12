@@ -1,22 +1,21 @@
-Text-based API for discovering your public IP
+HTML/Text/JSON/JSONp API for discovering your public IP
 ==============================================
 
-Returns the requester's public IP as plain text. This will be different from 
-their machine's IP when behind a NAT / PAT firewall.Also has a pretty front 
-page. Was built to support 
-https://github.com/nfriedly/node-dreamhost-dns-updater
+Returns the requester's public IP in a variety of formats. This will be different from 
+their machine's IP when behind a NAT / PAT firewall. 
 
-Feel free to use http://whatsmyip.nfriedly.com/text for any project that you want, however
-I make no guarentee that it will always be avaliable. It will ocasionally be slow to 
-respond due to the fact that heroku shuts down free instances after a while and restarts 
-them when they recieve their next request.
+Feel free to spin up your own instance or use http://ip.nfriedly.com/ for any project that you want.
+However I make no guarentee that it will always be avaliable.
 
 Installation / Set Up
 ---------------------
 
-git clone the repo and then push to heroku. Or run on your own system. It expects the 
-X-Forwarded-For header to be set when behind a reverse proxy, if that's not avaliable 
-then it returns the request's IP.
+No dependencies besides [Node.js](https://nodejs.org/). 
+Set the `PORT` environment variable and then start the server:
+
+```sh
+PORT=8080 npm start
+```
 
 Credits
 -------
