@@ -1,7 +1,9 @@
 {
-	"name": "node-heroku-ip-service",
+	"name": "ip-service",
 	"version": "1.0.1",
 	"engines": {
-		"node": "16.x"
-	}
+		"node": ">=16"
+	},
+	"author": {"name": "Nathan Friedly", "url": "https://www.nfriedly.com/"},
+	"license": "MIT"
 }
