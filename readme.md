@@ -1,4 +1,4 @@
-HTML/Text/JSON/JSONp API for discovering your public IP
+HTML/Text/JSON/JSONp API for determining public IP
 ==============================================
 
 Returns the requester's public IP in a variety of formats. This will be different from 
@@ -10,7 +10,8 @@ However I make no guarentee that it will always be avaliable.
 Installation / Set Up
 ---------------------
 
-No dependencies besides [Node.js](https://nodejs.org/). 
+No dependencies besides [Node.js](https://nodejs.org/).
+
 Set the `PORT` environment variable and then start the server:
 
 ```sh
